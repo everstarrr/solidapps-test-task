@@ -1,13 +1,13 @@
 export const images = [
-   '../../assets/avatar.webp',
-    '../../assets/character.webp',
-    '../../assets/charge_blue.webp',
-    '../../assets/charge_red.webp',
-    '../../assets/infoimage.webp',
-    '../../assets/magma_planet.webp',
-    '../../assets/magma.webp',
-    '../../assets/navbar.webp',
-    '../../assets/planet.webp',
-    '../../assets/preloader.webp',
-    '../../assets/starship.webp'
+    '/avatar.webp',
+    '/character.webp',
+    '/charge_blue.webp',
+    '/charge_red.webp',
+    '/infoimage.webp',
+    '/magma_planet.webp',
+    '/magma.webp',
+    '/navbar.webp',
+    '/planet.webp',
+    '/preloader.webp',
+    '/starship.webp'
 ]

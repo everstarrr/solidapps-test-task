@@ -29,7 +29,7 @@ export function App() {
     WebApp.expand()
     setMiniAppHeaderColor('#000000')
     setMiniAppBackgroundColor("#000000")
-    
+
     const loadImages = async () => {
       try {
         await preloadImages(images);

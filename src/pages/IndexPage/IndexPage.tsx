@@ -3,7 +3,7 @@ import styles from './IndexPage.module.scss'
 import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import { useState } from 'react';
 import clsx from 'clsx';
-import avatar from '../../../assets/avatar.webp'
+import avatar from '/avatar.webp'
 import robot from '../../../assets/icons/robot.svg'
 import energy from '../../../assets/icons/energy.svg'
 import time from '../../../assets/icons/time.svg'
