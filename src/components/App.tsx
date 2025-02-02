@@ -24,11 +24,11 @@ export function App() {
   };
 
   useEffect(() => {
-    setMiniAppHeaderColor('#000000')
-    setMiniAppBackgroundColor("#000000")
     WebApp.ready()
     WebApp.disableVerticalSwipes()
     WebApp.expand()
+    setMiniAppHeaderColor('#000000')
+    setMiniAppBackgroundColor("#000000")
 
     const loadImages = async () => {
       try {
