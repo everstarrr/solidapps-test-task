@@ -1,6 +1,6 @@
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
 import { LoadingScreen } from '@/pages/LoadingScreen/LoadingScreen';
-import { useLaunchParams, miniApp, useSignal } from '@telegram-apps/sdk-react';
+import { useLaunchParams, miniApp, useSignal, setMiniAppHeaderColor } from '@telegram-apps/sdk-react';
 import { AppRoot } from '@telegram-apps/telegram-ui';
 import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
@@ -12,6 +12,7 @@ export function App() {
   const [progress, setProgress] = useState(1);
 
   useEffect(() => {
+    setMiniAppHeaderColor('secondary_bg_color')
     const interval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 100));
     }, 50);
