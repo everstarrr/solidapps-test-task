@@ -24,6 +24,12 @@ export function App() {
   };
 
   useEffect(() => {
+    WebApp.ready()
+    WebApp.disableVerticalSwipes()
+    WebApp.expand()
+    setMiniAppHeaderColor('#000000')
+    setMiniAppBackgroundColor("#000000")
+    
     const loadImages = async () => {
       try {
         await preloadImages(images);
@@ -43,11 +49,6 @@ export function App() {
 
   useEffect(() => {
     if (isImagesLoaded) {
-      WebApp.ready()
-      WebApp.disableVerticalSwipes()
-      WebApp.expand()
-      setMiniAppHeaderColor('#000000')
-      setMiniAppBackgroundColor("#000000")
       const interval = setInterval(() => {
         setProgress((prev) => (prev < 100 ? prev + 1 : 100));
       }, 50);
@@ -61,9 +62,13 @@ export function App() {
       appearance={isDark ? 'dark' : 'light'}
       platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
     >
-      {progress === 100 ?
-        <IndexPage /> :
-        <LoadingScreen progress={progress} />
+      {isImagesLoaded &&
+        <>
+          {progress === 100 ?
+            <IndexPage /> :
+            <LoadingScreen progress={progress} />
+          }
+        </>
       }
     </AppRoot>
   );
