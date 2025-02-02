@@ -6,6 +6,10 @@ import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
 
 export function App() {
+  WebApp.ready()
+  WebApp.disableVerticalSwipes()
+  WebApp.expand()
+
   const lp = useLaunchParams();
   const isDark = useSignal(miniApp.isDark);
 
@@ -19,10 +23,6 @@ export function App() {
 
     return () => clearInterval(interval);
   }, []);
-
-  WebApp.ready()
-  WebApp.disableVerticalSwipes()
-  WebApp.expand()
 
   return (
     <AppRoot

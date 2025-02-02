@@ -1,5 +1,9 @@
 import { FC } from 'react'
 import styles from './ResourceItem.module.scss'
+import coin from '../../../assets/resources/coin.png'
+import green from '../../../assets/resources/green.png'
+import blue from '../../../assets/resources/blue.png'
+import red from '../../../assets/resources/red.png'
 
 type Props = {
     color: 'coin' | 'green' | 'blue' | 'red'
@@ -8,22 +12,22 @@ type Props = {
 
 const model = {
     coin: {
-        src: '/assets/resources/coin.png',
+        src: coin,
         bg: styles.coinBg,
         alt: 'Coin'
     },
     green: {
-        src: '/assets/resources/green.png',
+        src: green,
         bg: styles.greenBg,
         alt: 'Green resource'
     },
     blue: {
-        src: '/assets/resources/blue.png',
+        src: blue,
         bg: styles.blueBg,
         alt: 'Blue resource'
     },
     red: {
-        src: '/assets/resources/red.png',
+        src: red,
         bg: styles.redBg,
         alt: 'Red resource'
     },

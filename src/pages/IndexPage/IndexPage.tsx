@@ -3,6 +3,14 @@ import styles from './IndexPage.module.scss'
 import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import { useState } from 'react';
 import clsx from 'clsx';
+import avatar from '../../../assets/avatar.png'
+import robot from '../../../assets/icons/robot.svg'
+import energy from '../../../assets/icons/energy.svg'
+import time from '../../../assets/icons/time.svg'
+import radar from '../../../assets/icons/radar.svg'
+import market from '../../../assets/icons/market.svg'
+import tasks from '../../../assets/icons/tasks.svg'
+import friends from '../../../assets/icons/friends.svg'
 
 export const IndexPage = () => {
 
@@ -22,12 +30,12 @@ export const IndexPage = () => {
           <div className={styles.top}>
             <div className={styles.first}>
               <div className={styles.nameBlock}>
-                <img src='/assets/avatar.png' alt='Avatar' />
+                <img src={avatar} alt='Avatar' />
                 <h1>Max</h1>
               </div>
               <div className={styles.activeRobots}>
                 <div className={styles.robotsImgContainer}>
-                  <img src='/assets/icons/robot.svg' alt='Robot' />
+                  <img src={robot} alt='Robot' />
                 </div>
                 <div className={styles.robotsCountContainer}>
                   <p className={styles.robotsCount}>3 / 12</p>
@@ -46,7 +54,7 @@ export const IndexPage = () => {
             <div className={styles.energyInfo}>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src='/assets/icons/energy.svg' alt='Energy' />
+                  <img src={energy} alt='Energy' />
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>1.1k / 3.5k</p>
@@ -55,7 +63,7 @@ export const IndexPage = () => {
               </div>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src='/assets/icons/time.svg' alt='Time' />
+                  <img src={time} alt='Time' />
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>00:12:56</p>
@@ -71,11 +79,11 @@ export const IndexPage = () => {
       <footer className={styles.footer}>
         <nav className={styles.navbar}>
           <div className={styles.navbarItem}>
-            <img src='/assets/icons/radar.svg' alt='Radar' />
+            <img src={radar} alt='Radar' />
             <p>Radar</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src='/assets/icons/market.svg' alt='Market' />
+            <img src={market} alt='Market' />
             <p>Market</p>
           </div>
           <div className={styles.starshipItem}>
@@ -84,11 +92,11 @@ export const IndexPage = () => {
             <div className={styles.glow} />
           </div>
           <div className={styles.navbarItem}>
-            <img src='/assets/icons/tasks.svg' alt='Tasks' />
+            <img src={tasks} alt='Tasks' />
             <p>Tasks</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src='/assets/icons/friends.svg' alt='Friends' />
+            <img src={friends} alt='Friends' />
             <p>Friends</p>
           </div>
         </nav>
