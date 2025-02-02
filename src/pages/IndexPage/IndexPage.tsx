@@ -35,7 +35,7 @@ export const IndexPage = () => {
             <div className={styles.first}>
               <div className={styles.nameBlock}>
                 <img src={avatar} alt='Avatar' />
-                <h1>Max</h1>
+                <h1>Max_Asadovvv_22457</h1>
               </div>
               <div className={styles.activeRobots}>
                 <div className={styles.robotsImgContainer}>
