@@ -34,12 +34,12 @@ export const IndexPage = () => {
           <div className={styles.top}>
             <div className={styles.first}>
               <div className={styles.nameBlock}>
-                <img src={avatar} alt='Avatar' />
+                <img src={avatar} alt='Avatar' loading="eager"/>
                 <h1>Max</h1>
               </div>
               <div className={styles.activeRobots}>
                 <div className={styles.robotsImgContainer}>
-                  <img src={robot} alt='Robot' />
+                  <img src={robot} alt='Robot' loading="eager"/>
                 </div>
                 <div className={styles.robotsCountContainer}>
                   <p className={styles.robotsCount}>3 / 12</p>
@@ -58,7 +58,7 @@ export const IndexPage = () => {
             <div className={styles.energyInfo}>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src={energy} alt='Energy' />
+                  <img src={energy} alt='Energy' loading="eager"/>
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>1.1k / 3.5k</p>
@@ -67,7 +67,7 @@ export const IndexPage = () => {
               </div>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src={time} alt='Time' />
+                  <img src={time} alt='Time' loading="eager"/>
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>00:12:56</p>
@@ -81,17 +81,17 @@ export const IndexPage = () => {
         <button onClick={() => setIsButtonNegative(!isButtonNegative)}
           className={clsx(styles.chargeButton, isButtonNegative && styles.redBtn)}>
           {t('main.charge')}
-          <img src={energy} />
+          <img src={energy} alt='Energy' loading="eager"/>
         </button>
       </main>
       <footer className={styles.footer}>
         <nav className={styles.navbar}>
           <div className={styles.navbarItem}>
-            <img src={radar} alt='Radar' />
+            <img src={radar} alt='Radar' loading="eager"/>
             <p>{t('main.radar')}</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src={market} alt='Market' />
+            <img src={market} alt='Market' loading="eager"/>
             <p>{t('main.market')}</p>
           </div>
           <div className={styles.starshipItem}>
@@ -100,11 +100,11 @@ export const IndexPage = () => {
             <div className={styles.glow} />
           </div>
           <div className={styles.navbarItem}>
-            <img src={tasks} alt='Tasks' />
+            <img src={tasks} alt='Tasks' loading="eager"/>
             <p>{t('main.tasks')}</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src={friends} alt='Friends' />
+            <img src={friends} alt='Friends' loading="eager"/>
             <p>{t('main.friends')}</p>
           </div>
         </nav>
