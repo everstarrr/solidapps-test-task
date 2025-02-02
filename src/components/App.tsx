@@ -9,7 +9,6 @@ import { images } from './model';
 export function App() {
 
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
-  const [error, setError] = useState(null); // Состояние ошибки
 
   const preloadImages = (urls: string[]) => {
     return Promise.all(
@@ -30,7 +29,7 @@ export function App() {
         await preloadImages(images);
         setIsImagesLoaded(true);
       } catch (err: any) {
-        setError(err);
+        console.error(err);
       }
     };
 
