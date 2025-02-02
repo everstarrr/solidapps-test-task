@@ -3,7 +3,7 @@ import styles from './IndexPage.module.scss'
 import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import { useState } from 'react';
 import clsx from 'clsx';
-import avatar from '../../../assets/avatar.png'
+import avatar from '../../../assets/avatar.webp'
 import robot from '../../../assets/icons/robot.svg'
 import energy from '../../../assets/icons/energy.svg'
 import time from '../../../assets/icons/time.svg'
@@ -34,12 +34,12 @@ export const IndexPage = () => {
           <div className={styles.top}>
             <div className={styles.first}>
               <div className={styles.nameBlock}>
-                <img src={avatar} alt='Avatar' loading="eager"/>
+                <img src={avatar} alt='Avatar' />
                 <h1>Max</h1>
               </div>
               <div className={styles.activeRobots}>
                 <div className={styles.robotsImgContainer}>
-                  <img src={robot} alt='Robot' loading="eager"/>
+                  <img src={robot} alt='Robot' />
                 </div>
                 <div className={styles.robotsCountContainer}>
                   <p className={styles.robotsCount}>3 / 12</p>
@@ -58,7 +58,7 @@ export const IndexPage = () => {
             <div className={styles.energyInfo}>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src={energy} alt='Energy' loading="eager"/>
+                  <img src={energy} alt='Energy' />
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>1.1k / 3.5k</p>
@@ -67,7 +67,7 @@ export const IndexPage = () => {
               </div>
               <div className={styles.energyBlock}>
                 <div className={styles.energyIconBlock}>
-                  <img src={time} alt='Time' loading="eager"/>
+                  <img src={time} alt='Time' />
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>00:12:56</p>
@@ -81,17 +81,17 @@ export const IndexPage = () => {
         <button onClick={() => setIsButtonNegative(!isButtonNegative)}
           className={clsx(styles.chargeButton, isButtonNegative && styles.redBtn)}>
           {t('main.charge')}
-          <img src={energy} alt='Energy' loading="eager"/>
+          <img src={energy} />
         </button>
       </main>
       <footer className={styles.footer}>
         <nav className={styles.navbar}>
           <div className={styles.navbarItem}>
-            <img src={radar} alt='Radar' loading="eager"/>
+            <img src={radar} alt='Radar' />
             <p>{t('main.radar')}</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src={market} alt='Market' loading="eager"/>
+            <img src={market} alt='Market' />
             <p>{t('main.market')}</p>
           </div>
           <div className={styles.starshipItem}>
@@ -100,11 +100,11 @@ export const IndexPage = () => {
             <div className={styles.glow} />
           </div>
           <div className={styles.navbarItem}>
-            <img src={tasks} alt='Tasks' loading="eager"/>
+            <img src={tasks} alt='Tasks' />
             <p>{t('main.tasks')}</p>
           </div>
           <div className={styles.navbarItem}>
-            <img src={friends} alt='Friends' loading="eager"/>
+            <img src={friends} alt='Friends' />
             <p>{t('main.friends')}</p>
           </div>
         </nav>

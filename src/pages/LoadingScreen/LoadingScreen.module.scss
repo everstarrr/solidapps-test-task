@@ -1,7 +1,7 @@
 @import "/src/styles/mixins.scss";
 
 .preloader {
-    @include bg-img("./../../../assets/preloader.png");
+    @include bg-img("./../../../assets/preloader.webp");
     @include lower-gradient;
 
     &::after {
