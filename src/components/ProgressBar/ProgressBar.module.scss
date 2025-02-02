@@ -1,0 +1,30 @@
+@import "/src/styles/mixins.scss";
+
+@mixin progress-bar {
+    width: 100%;
+    border-radius: 16px;
+    height: 9px;
+}
+
+.container {
+    @include progress-bar;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.22) inset,
+        -2px -4px 21px 0px rgba(255, 255, 255, 0) inset;
+    backdrop-filter: blur(40px);
+    position: relative;
+}
+
+.progress {
+    background: var(--rainbow-gradient);
+    backdrop-filter: blur(12px);
+    @include progress-bar;
+}
+
+.shadow {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    opacity: 90%;
+    background: var(--rainbow-gradient);
+    filter: blur(10px);
+}

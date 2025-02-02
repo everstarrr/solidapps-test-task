@@ -1,0 +1,57 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    align-items: center;
+}
+
+@mixin bg-img($url1, $url2: "") {
+    background-image: url($url1), url($url2);
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@mixin lower-gradient {
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 346px;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.4) 29.5%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+        z-index: 1;
+    }
+}
+
+@mixin font-14{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+@mixin font-10{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 13px;
+    opacity: 50%;
+}
+
+@mixin font-16 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+}

@@ -1,5 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tektur:wght@400..900&display=swap");
+
+:root {
+    --rainbow-gradient: linear-gradient(
+        90deg,
+        #000aff 0%,
+        #3cf8ae 54.82%,
+        #fead17 100%
+    );
+}
+
 body {
-  background: var(--tg-theme-secondary-bg-color, white);
-  padding: 0;
-  margin: 0;
+    background: var(--tg-theme-secondary-bg-color, white);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Tektur";
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
 }

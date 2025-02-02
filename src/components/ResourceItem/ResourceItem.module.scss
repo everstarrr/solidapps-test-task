@@ -1,0 +1,60 @@
+@import "/src/styles/mixins.scss";
+
+.container {
+    @include flex-col;
+    gap: 4px;
+    width: 100%;
+    padding: 12px 0 9px 0;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.22) inset,
+        -2px -4px 21px 0px rgba(255, 255, 255, 0) inset;
+    backdrop-filter: blur(40px);
+    flex: 1 1 0%;
+    border-radius: 16px;
+
+    & div {
+        @include flex-row;
+        border-radius: 16px;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+
+        & img {
+            max-width: 48px;
+            max-height: 48px;
+        }
+    }
+
+    & p {
+        @include font-14;
+        opacity: 80%;
+    }
+}
+
+.blueBg {
+    background: rgba(34, 124, 231, 0.22);
+    backdrop-filter: blur(16px);
+}
+
+.greenBg {
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.05)
+        ),
+        linear-gradient(0deg, rgba(42, 227, 192, 0.1), rgba(42, 227, 192, 0.1));
+        backdrop-filter: blur(16px)
+
+}
+
+.redBg {
+    background: rgba(244, 105, 255, 0.14);
+    backdrop-filter: blur(16px);
+}
+
+.coinBg {
+    background: rgba(255, 231, 105, 0.14);
+    & img {
+        max-width: 30px !important;
+        max-height: 30px !important;
+    }
+}

@@ -19,8 +19,6 @@ function ErrorBoundaryError({ error }: { error: unknown }) {
 }
 
 export function Root() {
-
-
   return (
     <ErrorBoundary fallback={ErrorBoundaryError}>
       <App />
