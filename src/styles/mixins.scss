@@ -9,8 +9,8 @@
     align-items: center;
 }
 
-@mixin bg-img($url1, $url2: "") {
-    background-image: url($url1), url($url2);
+@mixin bg-img($url1, $url2: "", $url3: "") {
+    background-image: url($url1), url($url2), url($url3);
     width: 100%;
     min-height: 100vh;
     background-size: cover;

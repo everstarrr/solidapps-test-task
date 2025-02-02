@@ -6,17 +6,17 @@ import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
 
 export function App() {
-  WebApp.ready()
-  WebApp.disableVerticalSwipes()
-  WebApp.expand()
 
-  const lp = useLaunchParams();
+  let lp = useLaunchParams();
   const isDark = useSignal(miniApp.isDark);
 
   const [progress, setProgress] = useState(1);
 
   useEffect(() => {
-    setMiniAppHeaderColor('secondary_bg_color')
+    WebApp.ready()
+    WebApp.disableVerticalSwipes()
+    WebApp.expand()
+    setMiniAppHeaderColor('#ffffff')
     const interval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 100));
     }, 50);

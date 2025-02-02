@@ -11,10 +11,14 @@ import radar from '../../../assets/icons/radar.svg'
 import market from '../../../assets/icons/market.svg'
 import tasks from '../../../assets/icons/tasks.svg'
 import friends from '../../../assets/icons/friends.svg'
+import { useTranslation } from 'react-i18next';
 
 export const IndexPage = () => {
 
   const [planet, setPlanet] = useState<'default' | 'magma'>('default')
+  const [isButtonNegative, setIsButtonNegative] = useState(false);
+
+  const {t} = useTranslation("");
 
   const handleClick = () => {
     if (planet === "default")
@@ -39,7 +43,7 @@ export const IndexPage = () => {
                 </div>
                 <div className={styles.robotsCountContainer}>
                   <p className={styles.robotsCount}>3 / 12</p>
-                  <p className={styles.activeRobots}>active robots</p>
+                  <p className={styles.activeRobots}>{t('main.activeRobots')}</p>
                 </div>
               </div>
             </div>
@@ -58,7 +62,7 @@ export const IndexPage = () => {
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>1.1k / 3.5k</p>
-                  <p className={styles.energyTextDescription}>amount of energy</p>
+                  <p className={styles.energyTextDescription}>{t('main.amountOfEnergy')}</p>
                 </div>
               </div>
               <div className={styles.energyBlock}>
@@ -67,37 +71,41 @@ export const IndexPage = () => {
                 </div>
                 <div className={styles.energyTextBlock}>
                   <p className={styles.energyTextTitle}>00:12:56</p>
-                  <p className={styles.energyTextDescription}>time until energy ends</p>
+                  <p className={styles.energyTextDescription}>{t('main.energyTime')}</p>
                 </div>
               </div>
             </div>
             <ProgressBar value={40} />
           </div>
         </section>
-        <button className={styles.chargeButton}></button>
+        <button onClick={() => setIsButtonNegative(!isButtonNegative)}
+          className={clsx(styles.chargeButton, isButtonNegative && styles.redBtn)}>
+          {t('main.charge')}
+          <img src={energy} />
+        </button>
       </main>
       <footer className={styles.footer}>
         <nav className={styles.navbar}>
           <div className={styles.navbarItem}>
             <img src={radar} alt='Radar' />
-            <p>Radar</p>
+            <p>{t('main.radar')}</p>
           </div>
           <div className={styles.navbarItem}>
             <img src={market} alt='Market' />
-            <p>Market</p>
+            <p>{t('main.market')}</p>
           </div>
           <div className={styles.starshipItem}>
             <div className={styles.titleBg} />
-            <p className={styles.title}>Starship</p>
+            <p className={styles.title}>{t('main.starship')}</p>
             <div className={styles.glow} />
           </div>
           <div className={styles.navbarItem}>
             <img src={tasks} alt='Tasks' />
-            <p>Tasks</p>
+            <p>{t('main.tasks')}</p>
           </div>
           <div className={styles.navbarItem}>
             <img src={friends} alt='Friends' />
-            <p>Friends</p>
+            <p>{t('main.friends')}</p>
           </div>
         </nav>
         <button onClick={handleClick} className={styles.starshipIcon} />

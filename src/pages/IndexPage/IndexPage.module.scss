@@ -18,6 +18,7 @@
 .planetMagma {
     @include bg-img(
         "./../../../assets/character.png",
+        "./../../../assets/magma_planet.png",
         "./../../../assets/magma.png"
     );
 }
@@ -27,16 +28,30 @@
     align-items: start;
     gap: 16px;
     padding: 12px 16px;
-    background: rgba(0, 0, 0, 0.2);
-    // background-image: url('/assets/infoimage.png');
-    // background-size: cover;
-    background-blend-mode: overlay;
-    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.22) inset,
-        -2px -4px 21px 0px rgba(255, 255, 255, 0) inset;
-    backdrop-filter: blur(40px);
+    background-image: url("/assets/infoimage.png");
+    background-size: cover;
+    // background-blend-mode: overlay;
+
     border-radius: 16px;
     width: 100%;
     position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border-radius: 16px;
+        width: 100%;
+        box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.22) inset,
+            -2px -4px 21px 0px rgba(255, 255, 255, 0) inset;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    & > *{
+        z-index: 2;
+    }
 
     .top {
         @include flex-col;
@@ -146,12 +161,29 @@
 }
 
 .chargeButton {
-    background: url("/assets/charge.png");
+    @include flex-row;
+    @include font-16;
+    justify-content: center;
+    gap: 8px;
+    background: url("/assets/charge_blue.png");
     z-index: 3;
     background-size: cover;
     background-position: center;
     width: 285px;
-    height: 58px;
+    height: 75px;
+    padding: 0 15px 10px 12px;
+
+    & img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.redBtn {
+    background: url("/assets/charge_red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .footer {
