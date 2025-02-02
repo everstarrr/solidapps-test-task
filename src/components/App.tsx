@@ -1,6 +1,6 @@
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
 import { LoadingScreen } from '@/pages/LoadingScreen/LoadingScreen';
-import { useLaunchParams, miniApp, useSignal, setMiniAppHeaderColor } from '@telegram-apps/sdk-react';
+import { useLaunchParams, miniApp, useSignal, setMiniAppHeaderColor, setMiniAppBackgroundColor } from '@telegram-apps/sdk-react';
 import { AppRoot } from '@telegram-apps/telegram-ui';
 import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
@@ -16,7 +16,8 @@ export function App() {
     WebApp.ready()
     WebApp.disableVerticalSwipes()
     WebApp.expand()
-    setMiniAppHeaderColor('#ffffff')
+    setMiniAppHeaderColor('#000000')
+    setMiniAppBackgroundColor("#000000")
     const interval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 100));
     }, 50);

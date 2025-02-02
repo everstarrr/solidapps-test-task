@@ -198,9 +198,9 @@
     @include bg-img("./../../../assets/navbar.png");
     @include flex-row;
     justify-content: space-between;
-    background-size: contain;
+    background-size: cover;
     background-position: bottom;
-    min-height: 78px;
+    min-height: 80px;
 
     .navbarItem {
         @include flex-col;
