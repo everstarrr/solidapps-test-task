@@ -1,7 +1,8 @@
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
 import { LoadingScreen } from '@/pages/LoadingScreen/LoadingScreen';
-import { useLaunchParams, miniApp, useSignal, setMiniAppHeaderColor, setMiniAppBackgroundColor, miniAppReady, disableVerticalSwipes, expandViewport } from '@telegram-apps/sdk-react';
+import { useLaunchParams, miniApp, useSignal, setMiniAppHeaderColor, setMiniAppBackgroundColor } from '@telegram-apps/sdk-react';
 import { AppRoot } from '@telegram-apps/telegram-ui';
+import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
 import { images } from './model';
 
@@ -25,9 +26,9 @@ export function App() {
   useEffect(() => {
     setMiniAppHeaderColor('#000000')
     setMiniAppBackgroundColor("#000000")
-    miniAppReady()
-    disableVerticalSwipes()
-    expandViewport()
+    WebApp.ready()
+    WebApp.disableVerticalSwipes()
+    WebApp.expand()
 
     const loadImages = async () => {
       try {
